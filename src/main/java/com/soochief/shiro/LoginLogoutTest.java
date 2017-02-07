@@ -20,7 +20,8 @@ public class LoginLogoutTest {
     public void testHelloWorld(){
         // 获取SecurityManager工厂
 //        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
-        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
+//        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
+        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-jdbc-realm.ini");
         // 获取SecurityManager实例，并绑定给SecurityUtils
         SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
